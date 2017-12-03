@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile of {{user.first_name}} {{ user.last_name }}</title>
+</head>
+<body>
+<p></p>
+<form action="" method="post">
+    {% csrf_token %}
+    <ul><label for="username">Username</label></ul>
+    <ul><input type="text" value="{{ user.username   }}" name="username" disabled></ul>
+    <ul><label for="first_name">First name</label></ul>
+    <ul><input type="text" value="{{ user.first_name }}" name="first_name"></ul>
+    <ul><label for="last_name">Last name</label></ul>
+    <ul><input type="text" value="{{ user.last_name  }}" name="last_name"></ul>
+    <ul><label for="email">Email</label></ul>
+    <ul><input type="text" value="{{ user.email      }}" name="email" disabled></ul>
+    <ul><label for="pass">New password</label></ul>
+    <ul><input type="password"  value="" name="pass"></ul>
+    <ul><label for="phone">Phone</label></ul>
+    <ul><input type="text"      value="{{ userProf.phone }}" name="phone"></ul>
+    <ul><label for="skype">Skype</label></ul>
+    <ul><input type="text"      value="{{ userProf.skype }}" name="skype"></ul>
+    <ul><input type="submit" value="Save"></ul>
+
+</form>
+</body>
+</html>
